@@ -24,7 +24,7 @@ const MProduct = () => {
 
   const getProduct = async () => {
     setLoading(true);
-    const response = await axios.get("http://localhost:7035/product/", {
+    const response = await axios.get("https://lenskart-full-stack.onrender.com/product/", {
       headers: { Authorization: `Bearer ${token}` },
     });
     setLoading(false);

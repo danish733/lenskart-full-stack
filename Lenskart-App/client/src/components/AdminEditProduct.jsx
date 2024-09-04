@@ -33,7 +33,7 @@ const AdminEditProduct = () => {
     const fetchProductDetails = async () => {
         setLoading(true)
       try {
-        const response = await axios.get(`http://localhost:7035/product/${id}`, {
+        const response = await axios.get(`https://lenskart-full-stack.onrender.com/product/${id}`, {
           headers: { Authorization: `Bearer ${admintoken}` },
         });
         setProduct(response.data.product);
@@ -78,7 +78,7 @@ const AdminEditProduct = () => {
   const handleSubmit = async () => {
     setLoading(true)
     try {
-      await axios.patch(`http://localhost:7035/product/update/${id}`, product, {
+      await axios.patch(`https://lenskart-full-stack.onrender.com/product/update/${id}`, product, {
         headers: { Authorization: `Bearer ${admintoken}` },
       });
       setLoading(false)

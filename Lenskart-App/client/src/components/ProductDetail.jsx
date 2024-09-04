@@ -24,7 +24,7 @@ const ProductDetail = () => {
     try {
       setLoading(true);
       const token = localStorage.getItem("token");
-      const response = await axios.get(`http://localhost:7035/product/${id}`, {
+      const response = await axios.get(`https://lenskart-full-stack.onrender.com/product/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setProduct(response.data.product);
@@ -48,7 +48,7 @@ const ProductDetail = () => {
     if (token) {
       try {
         const response = await axios.post(
-          `http://localhost:7035/wishlist/add`,
+          `https://lenskart-full-stack.onrender.com/wishlist/add`,
           payload,
           {
             headers: { Authorization: `Bearer ${token}` },
@@ -92,7 +92,7 @@ const ProductDetail = () => {
       if (token) {
         try {
           const response = await axios.post(
-            `http://localhost:7035/cart/add`,
+            `https://lenskart-full-stack.onrender.com/cart/add`,
             payload,
             {
               headers: { Authorization: `Bearer ${token}` },

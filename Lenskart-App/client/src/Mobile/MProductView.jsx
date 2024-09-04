@@ -9,7 +9,7 @@ const MProductView = () => {
     <div>
       <Box>
         <Box> <Navbar/> </Box>
-        <Box mt="12vh">
+        <Box mt="16vh">
             <Box>product id =  {id}</Box>
         </Box>
       </Box>

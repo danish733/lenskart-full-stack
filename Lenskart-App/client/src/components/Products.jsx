@@ -159,7 +159,7 @@ const Products = () => {
 
     try {
       const response = await axios.get(
-        `http://localhost:7035/product?${queryParams.toString()}`,
+        `https://lenskart-full-stack.onrender.com/product?${queryParams.toString()}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

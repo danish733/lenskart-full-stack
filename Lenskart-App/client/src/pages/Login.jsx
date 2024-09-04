@@ -51,7 +51,7 @@ const Login = ({closeSignIn,openSignUp}) => {
     } else {
       setErrors({});
       try {
-        const response = await axios.post('http://localhost:7035/user/login', {
+        const response = await axios.post('https://lenskart-full-stack.onrender.com/user/login', {
           email: formData.email,
           password: formData.password,
         });

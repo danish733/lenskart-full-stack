@@ -64,7 +64,7 @@ const Register = ({ openSignIn, closeSignUp }) => {
     } else {
       setErrors({});
       try {
-        const response = await axios.post('http://localhost:7035/user/register', {
+        const response = await axios.post('https://lenskart-full-stack.onrender.com/user/register', {
           firstName: formData.firstName,
           lastName: formData.lastName,
           email: formData.email,

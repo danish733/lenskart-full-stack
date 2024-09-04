@@ -27,7 +27,7 @@ const Cart = () => {
   const fetchCartItems = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:7035/cart", {
+      const response = await axios.get("https://lenskart-full-stack.onrender.com/cart", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -56,7 +56,7 @@ const Cart = () => {
     setLoading(true);
     try {
       await axios.patch(
-        `http://localhost:7035/cart/update/${productId}`,
+        `https://lenskart-full-stack.onrender.com/cart/update/${productId}`,
         { quantity },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -93,7 +93,7 @@ const Cart = () => {
     setLoading(true);
     try {
       const response = await axios.delete(
-        `http://localhost:7035/cart/delete/${productId}`,
+        `https://lenskart-full-stack.onrender.com/cart/delete/${productId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }

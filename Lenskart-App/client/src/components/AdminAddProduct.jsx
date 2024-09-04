@@ -57,7 +57,7 @@ const AdminAddProduct = () => {
     setLoading(true)
     try {
       const response = await axios.post(
-        "http://localhost:7035/product/create",
+        "https://lenskart-full-stack.onrender.com/product/create",
         productData,
         {
           headers: { Authorization: `Bearer ${admintoken}` },

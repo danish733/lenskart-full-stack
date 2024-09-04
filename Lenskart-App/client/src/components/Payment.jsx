@@ -12,7 +12,7 @@ const Payment = ({ amount }) => {
   const handlePayment = async () => {
     setLoading(true); // Set loading to true when payment starts
     try {
-      const res = await fetch(`http://localhost:7035/payment/order`, {
+      const res = await fetch(`https://lenskart-full-stack.onrender.com/payment/order`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -40,7 +40,7 @@ const Payment = ({ amount }) => {
       handler: async (response) => {
         console.log("response", response);
         try {
-          const res = await fetch(`http://localhost:7035/payment/verify`, {
+          const res = await fetch(`https://lenskart-full-stack.onrender.com/payment/verify`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

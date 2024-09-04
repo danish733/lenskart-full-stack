@@ -31,7 +31,7 @@ const AdminUserDetail = () => {
   const fetchUser = async () => {
     setLoading(true)
     try {
-      const response = await axios.get("http://localhost:7035/user/", {
+      const response = await axios.get("https://lenskart-full-stack.onrender.com/user/", {
         headers: { Authorization: `Bearer ${admintoken}` },
       });
       setUsers(response.data.users);
@@ -53,7 +53,7 @@ const AdminUserDetail = () => {
   const handleDelete = async (id) => {
     setLoading(true)
     try {
-      await axios.delete(`http://localhost:7035/user/delete/${id}`, );
+      await axios.delete(`https://lenskart-full-stack.onrender.com/user/delete/${id}`, );
       toast({
         title: "User deleted successfully.",
         status: "success",

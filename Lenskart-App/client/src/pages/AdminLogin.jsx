@@ -24,7 +24,7 @@ const AdminLogin = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:7035/user/admin-login",
+        "https://lenskart-full-stack.onrender.com/user/admin-login",
         {
           email: form.email,
           password: form.password,

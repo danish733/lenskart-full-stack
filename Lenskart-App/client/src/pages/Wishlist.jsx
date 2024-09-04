@@ -15,7 +15,7 @@ const Wishlist = () => {
   const getWishlist = async () => {
     setLoading(true)
     try {
-      const response = await axios.get("http://localhost:7035/wishlist", {
+      const response = await axios.get("https://lenskart-full-stack.onrender.com/wishlist", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setWishlist(response.data.wishlist.products);
@@ -36,7 +36,7 @@ const Wishlist = () => {
     setLoading(true)
     try {
       await axios.post(
-        "http://localhost:7035/cart/add",
+        "https://lenskart-full-stack.onrender.com/cart/add",
         { productId, quantity: 1 }, // Assuming default quantity 1
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -69,7 +69,7 @@ const Wishlist = () => {
   const deleteFromWishlist = async (productId) => {
     setLoading(true)
     try {
-      await axios.delete(`http://localhost:7035/wishlist/delete/${productId}`, {
+      await axios.delete(`https://lenskart-full-stack.onrender.com/wishlist/delete/${productId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       
