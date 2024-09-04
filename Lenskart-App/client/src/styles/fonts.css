@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Rajdhani-Regular';
+    src: url('../assets/fonts/rajdhani.regular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Futura-Std-Medium';
+    src: url("../assets/fonts/Futura Std Medium.otf") format('opentype');
+
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
